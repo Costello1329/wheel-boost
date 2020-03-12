@@ -1,0 +1,6 @@
+[submodule "WheelBoostBackend"]
+	path = WheelBoostBackend
+	url = https://github.com/Costello1329/WheelBoostBackend
+[submodule "WheelBoostBot"]
+	path = WheelBoostBot
+	url = https://github.com/Costello1329/WheelBoostBot
