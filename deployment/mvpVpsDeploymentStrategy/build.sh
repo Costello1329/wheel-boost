@@ -1,6 +1,6 @@
 #!/bin/bash
 
-cd ../../WheelBoostBackend || printf "Error! No ../../WheelBoostBackend folder found." ; return
+cd ../../WheelBoostBackend || printf "Error! No ../../WheelBoostBackend folder found." ; exit
 python3 -m venv venv
 pip install -r req.txt
 python3 manage.py makemigrations
@@ -17,7 +17,7 @@ echo "export TOKEN=${token}" >> run.sh
 echo "export EVENTS_URL=${backend_url}" >> run.sh
 echo "export MAP_URL=${maps_url}" >> run.sh
 
-cd ../../WheelBoostBot || printf "Error! No ../../WheelBoostBot folder found." ; return
+cd ../../WheelBoostBot || printf "Error! No ../../WheelBoostBot folder found." ; exit
 python3 -m venv venv
 pip install -r req.txt
 python3 manage.py makemigrations
