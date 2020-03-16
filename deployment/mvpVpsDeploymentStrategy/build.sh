@@ -1,3 +1,5 @@
+#!/bin/bash
+
 cd ../../WheelBoostBackend || return
 python3 -m venv venv
 pip install -r req.txt
