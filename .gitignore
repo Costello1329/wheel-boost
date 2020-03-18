@@ -1,2 +1,4 @@
 .idea/
 *run.sh
+*monitor.sh
+*.out
