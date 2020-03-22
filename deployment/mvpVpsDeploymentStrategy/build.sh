@@ -16,7 +16,7 @@ export MAP_URL=https://yandex.ru/maps?
 
 [ -e ../deployment/mvpVpsDeploymentStrategy/run.sh ] && rm ../deployment/mvpVpsDeploymentStrategy/run.sh
 echo "nohup ../../WheelBoostBackend/manage.py runserver ${backend_port} &" >> ../deployment/mvpVpsDeploymentStrategy/run.sh
-echo "nohup ../../WheelBoostBot/manage.py runserver ${bot_port} &" >> ../deployment/mvpVpsDeploymentStrategy/run.sh
+echo "BOT_URL=$BOT_URL TOKEN=$TOKEN EVENTS_URL=$EVENTS_URL MAP_URL=$MAP_URL nohup ../../WheelBoostBot/manage.py runserver ${bot_port} &" >> ../deployment/mvpVpsDeploymentStrategy/run.sh
 
 [ -e ../deployment/mvpVpsDeploymentStrategy/monitor.sh ] && rm ../deployment/mvpVpsDeploymentStrategy/monitor.sh
 echo "lsof -i :${backend_port}" >> ../deployment/mvpVpsDeploymentStrategy/monitor.sh
