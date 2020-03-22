@@ -1,10 +1,11 @@
 #!/bin/bash
 
 cd ../../WheelBoostBackend || (printf "Error! No ../../WheelBoostBackend folder found."; exit)
-python3 -m venv venv
+python3.7 -m venv venv
+source venv/bin/activate
 pip3 install -r req.txt
-python3 manage.py makemigrations
-python3 manage.py migrate
+python3.7 manage.py makemigrations
+python3.7 manage.py migrate
 
 read -r -p "Bot token: " token
 read -r -p "Bot port: " bot_port
