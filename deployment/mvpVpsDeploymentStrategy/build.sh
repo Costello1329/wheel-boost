@@ -22,7 +22,7 @@ echo "nohup ../../WheelBoostBot/manage.py runserver ${bot_port} &" >> ../deploym
 echo "lsof -i :${backend_port}" >> ../deployment/mvpVpsDeploymentStrategy/monitor.sh
 echo "lsof -i :${bot_port}" >> ../deployment/mvpVpsDeploymentStrategy/monitor.sh
 
-cd ../../WheelBoostBot || (printf "Error! No ../../WheelBoostBot folder found."; exit)
+cd ../WheelBoostBot || (printf "Error! No ../../WheelBoostBot folder found."; exit)
 python3 -m venv venv
 pip3 install -r req.txt
 
