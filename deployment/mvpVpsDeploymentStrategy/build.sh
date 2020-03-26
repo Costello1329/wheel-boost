@@ -16,6 +16,7 @@ read -r -p "Backend port: " backend_port
 #export MAP_URL=https://yandex.ru/maps?
 
 [ -e ../deployment/mvpVpsDeploymentStrategy/run.sh ] && rm ../deployment/mvpVpsDeploymentStrategy/run.sh
+echo "source ../../WheelBoostBackend/venv/bin/activate" >> ../deployment/mvpVpsDeploymentStrategy/run.sh
 echo "nohup python3 ../../WheelBoostBackend/manage.py runserver 0.0.0.0:${backend_port} &" >> ../deployment/mvpVpsDeploymentStrategy/run.sh
 #echo "BOT_URL=$BOT_URL TOKEN=$TOKEN EVENTS_URL=$EVENTS_URL MAP_URL=$MAP_URL nohup python3 ../../WheelBoostBot/manage.py runserver 0.0.0.0:${bot_port} &" >> ../deployment/mvpVpsDeploymentStrategy/run.sh
 
